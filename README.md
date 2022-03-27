@@ -1,4 +1,4 @@
-# Jeu de Pierre Feuille Ciseaux en Javascript
+# Jeu de Pierre Feuille Ciseaux en HTML/Javascript
 
  Sont utilisés dans ce projet :
 
