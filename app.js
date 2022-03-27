@@ -7,14 +7,15 @@ let computerChoice
 let result
 
 possibleChoices.forEach(possibleChoices => possibleChoices.addEventListener('click', (e) =>{
-   userChoice = e.target.id
-   userChoiceDisplay.innerHTML = userChoice
-   generateComputerChoice()
-   getResult()
+   userChoice = e.target.id //On récupère le choix de l'utilisateur pour pouvoir le comparer par la suite
+   userChoiceDisplay.innerHTML = userChoice // Le choix de l'utilisateur s'affiche
+   generateComputerChoice() //Pour chacun des boutons, lors d'un clic, le résultat de l'ordinateur sera généré aléatoirement 
+   getResult() //Le resultat sera affiché à chaque nouveau clic
 }))
 
+
 function generateComputerChoice() {
-    const randomNumber = Math.floor(Math.random() * possibleChoices.length) +1 // Le résultat sera 1, 2 ou 3
+    const randomNumber = Math.floor(Math.random() * possibleChoices.length) +1 // Le résultat obtenu sera 1, 2 ou 3
     
     if (randomNumber === 1){
         computerChoice = 'rock'
@@ -26,7 +27,7 @@ function generateComputerChoice() {
         computerChoice = 'scissors'
     }
 
-    computerChoiceDisplay.innerHTML = computerChoice
+    computerChoiceDisplay.innerHTML = computerChoice //Le résultat choisi s'affiche sur la page
 }
 
 function getResult(){
@@ -51,6 +52,6 @@ function getResult(){
     if (computerChoice === 'scissors' && userChoice === 'paper'){
         result = `Computer win !`
     }
-    resultDisplay.innerHTML =result
+    resultDisplay.innerHTML =result //Après comparaison, le résultat de la manche s'affiche sur la page
 }
 
